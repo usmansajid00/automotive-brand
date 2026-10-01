@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Geist:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-bc1: #0c0c0c;
+  --brand-bc2: #161616;
+  --brand-bc3: #410306;
+  --brand-bc4: #c5a064;
+  --brand-bc5: #f2f1ed;
+  --global-white: #ffffff;
+  --global-black: #000000;
+  --editorial: 'Cormorant Garamond', 'Editorial New', Georgia, Times, serif;
+  --font-heading: var(--editorial);
+  --font-body: 'Geist', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+html {
+  background-color: var(--brand-bc1);
+  color: var(--brand-bc5);
+  font-family: var(--font-body);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--brand-bc1);
+  color: var(--brand-bc5);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+::selection {
+  background-color: #f2f1ed;
+  color: #0c0c0c;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
